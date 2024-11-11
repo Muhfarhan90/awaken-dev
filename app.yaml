@@ -1,0 +1,15 @@
+runtime: python39
+handlers:
+  - url: /styles
+    static_dir: styles
+
+  - url: /images
+    static_dir: images
+
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /(.*)
+    static_files: \1
+    upload: /(.*)
